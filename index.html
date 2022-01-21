@@ -53,7 +53,7 @@
             <section class="hero">
                 <div class="container hero-box">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
+                    <button class="hero-btn btn" type="button" data-modal-open>Заказать услугу</button>
                 </div>
             </section>
             <section class="benefits">
@@ -373,6 +373,17 @@
         </main>
         <footer class="footer">
             <div class="container footer-box">
+                <div class="subscription-box">
+                    <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+                    <form class="subscription-form">
+                        <input class="subscription-input" type="email" name="user-email" required placeholder="E-mail">
+                        <button class="subscription-btn btn" type="submit">Подпиаться
+                            <svg class="subscription-icon">
+                                <use href="images/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
                 <div class="social-box">
                     <h2 class="social-title">Присойденяйтесь</h2>
                     <ul class="social-list list">
@@ -433,33 +444,65 @@
             <div class="modal">
                 <button class="modal-btn" data-modal-close>
                     <svg class="modal-icon-close">
-                        <use href="images/icons.svg#icon-model-close"></use>
+                        <use href="images/icons.svg#icon-modal-close"></use>
                     </svg>
                 </button>
                 <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
                 <form>
-                    <label class="form-name">
-                        Имя
-                        <input class="form-input" type="text">
-                    </label>
-                    <label class="form-name">
-                        Телефон
-                        <input class="form-input" type="text">
-                    </label>
-                    <label class="form-name">
-                        Почта
-                        <input class="form-input" type="text">
-                    </label>
-                    <label class="form-name">
-                        Комментарий
-                        <textarea class="form-textarea"></textarea>
-                    </label>
-                    <label class="form-checkbox">
-                        <input class="form-input-checkbox" type="checkbox" name="hobby" value="music" checked />
-                        Соглашаюсь с рассылкой и принимаю <a class="form-link link" href="">Условия договора</a>
-                    </label>
+                    <div class="input-box">
+                        <label class="form-name" for="user-name">Имя</label>
+                        <input class="form-input" 
+                        type="text" 
+                        name="user-name" 
+                        id="user-name"
+                        required 
+                        minlength="2">
+                        <svg class="form-icon form-icon-person">
+                            <use href="images/icons.svg#icon-person"></use>
+                        </svg>
+                    </div>
+                    <div class="input-box">
+                        <label class="form-name" for="user-phone">Телефон</label>
+                        <input class="form-input" 
+                        type="tel" 
+                        name="user-phone" 
+                        id="user-phone"
+                        required 
+                        >
+                        <svg class="form-icon form-icon-phone">
+                            <use href="images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>
+                    <div class="input-box">
+                        <label class="form-name" for="user-email">Почта</label>
+                        <input class="form-input" type="email" name="user-email" 
+                        id="user-email" required>
+                        <svg class="form-icon-email form-icon">
+                            <use href="images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
+                    <div class="input-box">
+                        <label class="form-name" for="user-text">Комментарий</label>
+                        <textarea class="form-textarea" id="user-text" 
+                        placeholder="Введите текст"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <input class="form-input-checkbox visually-hidden" 
+                        type="checkbox" name="agreement" required
+                        id="agreement" />
+                        <label class="form-checkbox" for="agreement">
+                            <span class="checkbox-span">
+                                <svg class="checkbox-icon">
+                                    <use href="images/icons.svg#icon-check"></use>
+                                </svg>
+                            </span>
+                            Соглашаюсь с рассылкой и принимаю
+                            <a class="form-link link" href="" target="_blank" rel="noreferrer noopener">
+                                Условия договора</a>
+                        </label>
+                    </div>
                     <div class="form-btn-box" >
-                        <button class="form-btn" type="submit">Отправить</button>
+                        <button class="form-btn btn" type="submit">Отправить</button>
                     </div>
                 </form>
             </div>
