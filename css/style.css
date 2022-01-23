@@ -249,6 +249,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .checkbox-span {
   border: 2px solid var(--third-color);
